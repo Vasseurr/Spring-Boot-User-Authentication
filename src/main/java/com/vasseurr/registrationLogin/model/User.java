@@ -31,10 +31,10 @@ public class User {
 	@Column(name = "password")
 	private String password;
 	
-	@Column(name = "firstName")
-	private String firstName;
+	@Column(name = "first_name")
+	private String first_name;
 	
-	@Column(name = "lastName")
-	private String lastName;
+	@Column(name = "last_name")
+	private String last_name;
 	
 }
