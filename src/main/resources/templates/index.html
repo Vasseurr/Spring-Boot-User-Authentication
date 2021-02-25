@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<title>User</title>
@@ -7,8 +7,13 @@
 </head>
 <body>
 
-	<div class="container">
-		<h1>Welcome to user home page</h1>
+	<div class="container text-center">
+		<div>
+			<h1>Welcome to user home page</h1>
+		</div>
+		<div>
+			<h3><a th:href="@{/register}">Register</a></h3>
+		</div>
 	</div>
 </body>
 </html>
