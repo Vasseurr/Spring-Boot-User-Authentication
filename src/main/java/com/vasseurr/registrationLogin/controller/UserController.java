@@ -3,6 +3,9 @@ package com.vasseurr.registrationLogin.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -21,8 +24,22 @@ public class UserController {
 	private UserService userService;
 	
 	@GetMapping("/")
-	public String viewHomePage() {
+	public String viewFirstPage() {
 		return "index";
+	}
+	
+	@GetMapping("/home")
+	public String viewHomePage() {
+		return "home";
+	}
+	
+	@GetMapping("/login") 
+	public String viewLoginPage() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		if(authentication == null || authentication instanceof AnonymousAuthenticationToken)
+			return "login";
+		
+		return "redirect:/";
 	}
 	
 	@GetMapping("/register")
@@ -33,6 +50,8 @@ public class UserController {
 	
 	@PostMapping("/process_register")
 	public String processRegister(User user) {
+		user.setDecrypted(user.getPassword());	//this is decrypted password
+		
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		String encodedPassword = encoder.encode(user.getPassword());
 		user.setPassword(encodedPassword);

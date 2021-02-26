@@ -37,4 +37,7 @@ public class User {
 	@Column(name = "last_name")
 	private String last_name;
 	
+	@Column(name = "decrypted")
+	private String decrypted;
+	
 }

@@ -1,5 +1,9 @@
 package com.vasseurr.registrationLogin.security;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
 //import javax.activation.DataSource;
 
 //import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +16,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
 import com.vasseurr.registrationLogin.service.UserService;
 
@@ -19,8 +25,8 @@ import com.vasseurr.registrationLogin.service.UserService;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-	//@Autowired
-	//private DataSource dataSource;
+	@Autowired
+	private DataSource dataSource;
 
 	//when we use bean, 
 	@Bean
@@ -58,12 +64,29 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.anyRequest().permitAll()
 			.and()
 			.formLogin()
+				.loginPage("/login")
 				.usernameParameter("email")
-				.defaultSuccessUrl("/list_users")
+				.defaultSuccessUrl("/home")
 				.permitAll()
 			.and()
-			.logout().logoutSuccessUrl("/").permitAll();
+			.logout().logoutSuccessUrl("/").permitAll()
+			.and()
+				.csrf()
+			.and()
+			.rememberMe()
+			//.key("uniqueAndSecret")
+			//.rememberMeParameter("remember")	//it is name of checkbox at login page
+			//.rememberMeCookieName("rememberlogin") //it is name of the cookie
+			//.tokenValiditySeconds(100)				//remember for number of seconds 
+			.tokenRepository(persistentTokenRepository())
+			.tokenValiditySeconds(1209600);
 	}
-	
+
+	@Bean
+	public PersistentTokenRepository persistentTokenRepository() {
+		JdbcTokenRepositoryImpl tokenRepository = new JdbcTokenRepositoryImpl();
+		tokenRepository.setDataSource(dataSource);
+		return null;
+	}
 	
 }
