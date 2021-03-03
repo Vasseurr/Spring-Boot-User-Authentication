@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>User</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous" />
+</head>
+<body>
+
+	<div th:replace="fragments/navbar.html"></div>
+	<div class="container text-center">
+		<div>
+			<img class="img-fluid" th:src="@{images/home.png}" style="height: 50%; width: 50%; margin-top: 2%; margin-bottom: 5%;"/>
+		</div>
+		<div>
+			<!-- <h3><a th:href="@{/list_users}">List All Users</a></h3> -->
+			<!-- <h3><a th:href="@{/register}">Register</a></h3> -->
+			<h3>THIS IS ABOUT</h3>	<!-- This will be provided by spring security-->
+		</div>
+	</div>
+</body>
+</html>

@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-sm   navbar-light bg-light">
+<link rel="stylesheet" type="text/css" href="/src/main/resources/templates/fragments/mystyle.css">
+
+<nav class="navbar navbar-expand-sm   navbar-light bg-light" style="margin: 0 10%;">
         	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           		<span class="navbar-toggler-icon"></span>
         	</button>
@@ -22,10 +24,10 @@
             			</div>
           			</li>
           			<li class="nav-item">
-            			<a class="nav-link" href="#">About</a>
+            			<a class="nav-link" href="/about">About</a>
           			</li>
           			<li class="nav-item">
-            			<a class="nav-link" href="#">Contact Us</a>
+            			<a class="nav-link" href="/contact">Contact Us</a>
           			</li>
            <!-- <li class="nav-item dropdown dmenu">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -44,16 +46,17 @@
 				  
 				<div class="social-part">
 					<i>
-						<a style="background-color: transparent; border: none;" href="/profile">
+						<a style="background-color: transparent; border: none;" th:href="@{profile}">
 							<img class="img-fluid" th:src="@{images/profile.png}" style="height: 40px; width: 40px;"/>
 						</a>
 					</i>
+					<i>[[${#request.userPrincipal.principal.getFullName()}]]</i>
 					<i class="fa fa-facebook" aria-hidden="true"></i>
             		<i class="fa fa-twitter" aria-hidden="true"></i>
 					<i class="fa fa-instagram" aria-hidden="true"></i>
 					<i>
 						<form name="logoutForm" th:action="@{/logout}" method="post">
-							<input th:type="submit" value="Sign Out" class="btn" style="background-color: transparent;"/>
+							<input th:type="submit" value="Sign Out" class="btn"/>
 						</form>
 					</i>
           		</div>

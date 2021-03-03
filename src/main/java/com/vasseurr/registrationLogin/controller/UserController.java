@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.vasseurr.registrationLogin.model.User;
+import com.vasseurr.registrationLogin.security.CustomUserDetails;
 import com.vasseurr.registrationLogin.service.UserService;
 
 @Controller
@@ -73,13 +75,20 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/profile", method = RequestMethod.GET)
-	@ResponseBody
-	public String viewProfile(Model model, Authentication auth) {
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		User user = (User) authentication.getPrincipal();
-		/*UserDetails userDetails = (UserDetails) auth.getPrincipal();
-		User user = userService.findBy*/
-		model.addAttribute("user", userService.findById(user.getId()));
+	public String viewProfile(Principal principal, Model model) {
+		String email = principal.getName();
+		User user = (User) userService.findByEmail(email);
+		model.addAttribute("user", user);
 		return "/profile";
+	}
+	
+	@GetMapping("/about")
+	public String viewAbout(Model model) {
+		return "about";
+	}
+	
+	@GetMapping("/contact")
+	public String viewContact(Model model) {
+		return "contact";
 	}
 }
