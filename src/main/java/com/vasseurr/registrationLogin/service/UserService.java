@@ -1,6 +1,7 @@
 package com.vasseurr.registrationLogin.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -41,6 +42,10 @@ public class UserService implements UserDetailsService{
 	
 	public List<User> findAll() {
 		return userRepository.findAll();
+	}
+	
+	public Optional<User> findById(long id) {
+		return userRepository.findById(id);
 	}
 
 	//you can replace email with username

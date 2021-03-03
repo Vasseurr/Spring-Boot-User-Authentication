@@ -1,17 +1,23 @@
 package com.vasseurr.registrationLogin.controller;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.vasseurr.registrationLogin.model.User;
 import com.vasseurr.registrationLogin.service.UserService;
@@ -66,4 +72,14 @@ public class UserController {
 		return "users";
 	}
 	
+	@RequestMapping(value = "/profile", method = RequestMethod.GET)
+	@ResponseBody
+	public String viewProfile(Model model, Authentication auth) {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		User user = (User) authentication.getPrincipal();
+		/*UserDetails userDetails = (UserDetails) auth.getPrincipal();
+		User user = userService.findBy*/
+		model.addAttribute("user", userService.findById(user.getId()));
+		return "/profile";
+	}
 }

@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-sm   navbar-light bg-light">
+        	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          		<span class="navbar-toggler-icon"></span>
+        	</button>
+
+        	<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            		<li class="nav-item">
+              			<a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            		</li>
+            		<li class="nav-item">
+              			<a class="nav-link" href="/list_users">User List</a>
+            		</li>
+            		<li class="nav-item dropdown dmenu">
+            			<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              			Our Service
+            			</a>
+            			<div class="dropdown-menu sm-menu">
+              				<a class="dropdown-item" href="#">service2</a>
+              				<a class="dropdown-item" href="#">service 2</a>
+              				<a class="dropdown-item" href="#">service 3</a>
+            			</div>
+          			</li>
+          			<li class="nav-item">
+            			<a class="nav-link" href="#">About</a>
+          			</li>
+          			<li class="nav-item">
+            			<a class="nav-link" href="#">Contact Us</a>
+          			</li>
+           <!-- <li class="nav-item dropdown dmenu">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Dropdown link
+            </a>
+            <div class="dropdown-menu sm-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+              <a class="dropdown-item" href="#">Link 4</a>
+              <a class="dropdown-item" href="#">Link 5</a>
+              <a class="dropdown-item" href="#">Link 6</a>
+            </div>
+          </li> -->
+          		</ul>
+				  
+				<div class="social-part">
+					<i>
+						<a style="background-color: transparent; border: none;" href="/profile">
+							<img class="img-fluid" th:src="@{images/profile.png}" style="height: 40px; width: 40px;"/>
+						</a>
+					</i>
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+            		<i class="fa fa-twitter" aria-hidden="true"></i>
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+					<i>
+						<form name="logoutForm" th:action="@{/logout}" method="post">
+							<input th:type="submit" value="Sign Out" class="btn" style="background-color: transparent;"/>
+						</form>
+					</i>
+          		</div>
+        	</div>
+		  </nav>
