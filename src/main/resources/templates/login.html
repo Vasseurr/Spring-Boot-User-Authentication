@@ -13,7 +13,7 @@
 
 	<div class="container-fuild text-center">
 		<div>
-			<img class="img-fluid" th:src="@{images/login.png}" style="height: 10%; width: 10%; margin-top: 2%;"/>
+			<img class="img-fluid" th:src="@{images/login.png}" style="height: 10%; width: 10%; margin-top: 2%; margin-bottom:3%;"/>
 		</div>
 		<div>
 			<form th:action="@{/login}" method="post" style="max-width: 350px; margin:0 auto;">
@@ -27,7 +27,7 @@
         		</div>
 
 				<div class="border border-secondary p-3 rounded">
-            		<p>Welcome to My Website</p>
+            		<p style="color:#101820FF"><b>Login</b></p>
 					
 					<p>
                 		<input type="email" name="email" class="form-control" placeholder="E-mail" required autofocus/>
@@ -43,10 +43,18 @@
            		 	</p>
 			
 					<p>
-                		<input type="submit" value="Login" class="btn btn-primary" />
-            		</p>
+						<input type="submit" value="Login" class="btn btn-primary" 
+							style="background: -webkit-linear-gradient(#CBCE91FF, #EA738DFF);-webkit-text-fill-color: white; width:200px;"
+						/>
+					</p>
 				</div>
 				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+				<p>
+					<a href="/register"
+						style="border-radius: 10px; background: -webkit-linear-gradient(red, blue);-webkit-text-fill-color: white; margin-top:10px; width:100px; float:right;">
+					Register
+					</a>
+				</p>
 			</form>
 		</div>
 	</div>

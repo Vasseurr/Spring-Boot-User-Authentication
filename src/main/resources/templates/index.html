@@ -7,16 +7,22 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
         crossorigin="anonymous" />
 </head>
-<body>
+<body style="background:url(/images/screen.png) no-repeat center center fixed; background-size: 60%;">
 
 	<div class="container text-center">
-		<div>
-			<img class="img-fluid" th:src="@{images/home.png}" style="height: 50%; width: 50%; margin-top: 2%; margin-bottom: 5%;"/>
+		<div style="margin-top:15%;">
+			<label style="font-size: 72px;background: -webkit-linear-gradient(#00FFFF, #0000CC);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
+				Hello!
+			<label style="font-size: 55px;background: -webkit-linear-gradient(blue, red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
+				Welcome to User Management Website
+			<label></label>
 		</div>
-		<div>
+		<div style="margin-top: 10%;">
 			<!-- <h3><a th:href="@{/list_users}">List All Users</a></h3> -->
 			<!-- <h3><a th:href="@{/register}">Register</a></h3> -->
-			<h3><a th:href="@{/login}">Login</a></h3>	<!-- This will be provided by spring security-->
+			<h3><a th:href="@{/login}" 
+				style="background: -webkit-linear-gradient(#b1d352, #c24850);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
+				Login</a></h3>	<!-- This will be provided by spring security-->
 		</div>
 	</div>
 </body>
