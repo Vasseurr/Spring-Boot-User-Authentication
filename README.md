@@ -92,6 +92,11 @@ My name is Okan and I'm a student of Computer Engineer. You can find me on [![Li
 
 ![Okan's GitHub stats](https://github-readme-stats.vercel.app/api?username=Vasseurr&show_icons=true&theme=dracula)
 
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Vasseurr&repo=OWIS)](https://github.com/anuraghazra/github-readme-stats)
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Vasseurr&repo=MatchCard)](https://github.com/anuraghazra/github-readme-stats)
+
+
 
 <!-- links to social media icons -->
 
