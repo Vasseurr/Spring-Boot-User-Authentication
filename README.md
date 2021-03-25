@@ -30,16 +30,20 @@ My name is Okan and I'm a student of Computer Engineer. You can find me on [![Li
 - 100% FREE & Open Source
 
 # Screenshots
-
-<div style="align:center;">
+<div style="align:center; margin:5px;">
+<!--
+  <div style="margin-top:5px;">
   <i>Index Page</i>
   <a>
     <img src="https://user-images.githubusercontent.com/67058617/109820136-c7b44580-7c45-11eb-90f4-5e00ac46341e.PNG" width="650" height="350"/>
   </a>
+  </div>
+  <div style="margin-top:5px;">
   <i>Login Page</i>
   <a>
     <img src="https://user-images.githubusercontent.com/67058617/109820147-cb47cc80-7c45-11eb-86d7-c88e37024bdf.PNG" width="650" height="350" >
   </a>
+  </div>
   <i>Register Page</i>
   <a>
     <img src="https://user-images.githubusercontent.com/67058617/109820155-cd119000-7c45-11eb-9e28-8f80087b56d1.PNG" width="650" height="350" >
@@ -56,7 +60,31 @@ My name is Okan and I'm a student of Computer Engineer. You can find me on [![Li
   <a>
     <img src="https://user-images.githubusercontent.com/67058617/109820190-d569cb00-7c45-11eb-98a0-0f7afdb85a86.PNG" width="650" height="350" >
   </a>
-  
+ -->
+  <p>
+<!--    Index Page -->
+    <img src="https://user-images.githubusercontent.com/67058617/109820136-c7b44580-7c45-11eb-90f4-5e00ac46341e.PNG" width="650" height="350"/>
+  </p>
+  <p>
+<!--    Login Page-->
+    <img src="https://user-images.githubusercontent.com/67058617/109820147-cb47cc80-7c45-11eb-86d7-c88e37024bdf.PNG" width="650" height="350"/>
+  </p>
+  <p>
+<!--    Register Page-->
+    <img src="https://user-images.githubusercontent.com/67058617/109820155-cd119000-7c45-11eb-9e28-8f80087b56d1.PNG" width="650" height="350"/>
+  </p>
+  <p>
+ <!--   Home Page-->
+    <img src="https://user-images.githubusercontent.com/67058617/109820167-cf73ea00-7c45-11eb-8d3d-cbd96b7d29b6.PNG" width="650" height="350"/>
+  </p>
+  <p>
+  <!--  User List-->
+    <img src="https://user-images.githubusercontent.com/67058617/109820177-d3077100-7c45-11eb-9c92-4f5b25fe71a1.PNG" width="650" height="350"/>
+  </p>
+  <p>
+ <!--   Profile Page-->
+    <img src="https://user-images.githubusercontent.com/67058617/109820190-d569cb00-7c45-11eb-98a0-0f7afdb85a86.PNG" width="650" height="350"/>
+  </p>
 </div>
 
 ## &#x1f4c8; GitHub Stats
@@ -68,7 +96,7 @@ My name is Okan and I'm a student of Computer Engineer. You can find me on [![Li
 <!-- links to social media icons -->
 
 [1.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)
-[1.2]: https://i.imgur.com/Vahbdkj.PNG (LinkedIn icon without padding)
+[1.2]: https://img.icons8.com/plasticine/25/000000/linkedin.png (LinkedIn icon without padding)
 
 <!-- links to your social media accounts -->
 
