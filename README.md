@@ -12,7 +12,7 @@ My name is Okan and I'm a student of Computer Engineer. You can find me on [![Li
 - 404 (Not Found)
 
 ## 🔧 Technologies & Tools
-![](https://img.shields.io/badge/OS-Windows-Green?style=flat&logo=linux&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/OS-Windows-Green?style=flat&logo=windows&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Editor-eclipse%20idea-blue.svg?style=flat&logo=eclipse%20ide&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Code-HTML-informational?style=flat&logo=html5&logoColor=white&color=2bbc8a)
